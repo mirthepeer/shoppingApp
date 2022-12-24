@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +12,174 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+small{
+  display: block;
 }
+
+.item-detail{
+  border: 1px solid;
+  padding: 1em;
+  
+  
+}
+
+
+.add-btn{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 244, 225);
+  box-shadow: 0 0 3px;
+  width: 100%;
+}
+
+.logo{
+  padding-left: .5em;
+  color: rgb(66, 42, 34);
+  text-shadow: 0 20px 10px black;
+
+}
+
+.current-tab{
+ margin-top: 3.5em;
+}
+
+.card{
+  box-shadow: 0 0 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+
+}
+.product-img{
+
+}
+
+img{
+  object-fit: cover;
+  max-width: 80px;
+  max-height: 150px;
+}
+
+.cart-item{
+  color: rgba(0, 0, 0, 0.518);
+  border-left: 1px solid;
+  padding-left: .2em;
+}
+
+.item-checkout{
+  display: flex;
+  padding: .5em;
+  gap: 2em;
+}
+
+
+.cart-item-options{
+  margin-left: auto;
+  display: flex;
+  gap: .4em;
+}
+
+span{
+  font-weight: 700;
+  font-style: italic;
+}
+
+.item-index{
+  font-weight: 800;
+}
+
+
+
+
+.product-title{
+  color: rgb(66, 42, 34);
+  font-size: .75rem;
+}
+
+.current-tab{
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(66, 42, 34);
+}
+
+.product-description{
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary-btn{
+  background-color: rgb(66, 42, 34);
+  color: white;
+  padding: 0.2em .8em;
+  margin-top: .4em;
+  border: none;
+  border-radius: 15px;
+}
+
+
+
+
+
+
+
+.nav-items{
+  margin-left: auto;
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+.container{
+ margin-top: 3em;
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ gap: 1em;
+ column-gap: 0;
+}
+
+.item-index{
+  align-self: center;
+}
+
+.cart-item-summary{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-summary{
+  text-align: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+
+}
+
+.gap{
+  gap: 1em;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
