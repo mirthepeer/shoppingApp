@@ -49,6 +49,7 @@ nav{
 
 .current-tab{
  margin-top: 3.5em;
+ text-align: center;
 }
 
 .card{
@@ -183,7 +184,7 @@ span{
 .primary-btn{
   background-color: rgb(66, 42, 34);
   color: white;
-  padding: 0.2em .8em;
+  padding: 0.6em .8em;
   margin-top: .4em;
   border: none;
   border-radius: 15px;
@@ -229,6 +230,12 @@ span{
   align-items: center;
   gap: 1em;
   padding: 1em;
+}
+
+.checkout-elements{
+  border: 1px solid;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .checkout{

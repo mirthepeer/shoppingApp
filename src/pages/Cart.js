@@ -30,8 +30,8 @@ export default function(){
                 <small className="cart-item"><span>{product.title}</span> </small>
                 <small className="cart-item-price"> ${product.price} x {qty}</small>
                 <div className="add-remove">
-                <button onClick={()=>removeItem(product.id)} className="primary-btn add"><i class="ri-delete-bin-7-fill"></i></button>
-                <button onClick={()=>handleAdd(product)} className="primary-btn remove"><i class="ri-add-circle-line"></i></button>
+                <i onClick={()=>removeItem(product.id)} className="primary-btn add" class="ri-delete-bin-7-fill"></i>
+                <i onClick={()=>handleAdd(product)}  class="ri-add-circle-line"></i>
                 </div>
             </div>
             </div>
@@ -67,7 +67,9 @@ export default function(){
         
         
         </div>
+        <div className="checkout-elements">
         {CheckoutElemets}
+        </div>
         <div className="checkout-summary flex flex-column">
         {checkoutBtn}
 
