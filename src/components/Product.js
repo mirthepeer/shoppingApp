@@ -5,12 +5,12 @@ export default function Product({item, handleAdd, cart, removeItem}){
     const {rate, count} = item.rating
     return (
         <div className="card flex-column">
-           
+            <div className="card-backdrop" />
             <div className="product-img">
                 <img src={item.image}/> 
             </div>
             <small className="ratings">{rate}⭐<span className="rating-count">({count})</span></small>
-            <Link to={`/products/${item.id}`}><h4 className="product-title">{item.title} </h4></Link> 
+            <Link to={`/products/${item.id}`} className="product-link"><h4 className="product-title">{item.title} </h4></Link> 
             <h4 className="product-title">${item.price}</h4>
             
             
