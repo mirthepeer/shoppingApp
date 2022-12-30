@@ -10,7 +10,8 @@ window.addEventListener('load', () => {
   gsap
     .timeline()
     .to('.loading-screen .ring', { autoAlpha: 0 })
-    .to('.loading-screen', { clipPath: 'circle(0% at 0% 100%)', duration: 1, delay: -0.5 });
+    .to('.loading-screen', { clipPath: 'circle(0% at 0% 100%)', duration: 1, delay: -0.5 })
+    .set('.loading-screen', { display: 'none' });
 });
 
 function App() {
