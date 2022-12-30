@@ -43,8 +43,9 @@ nav {
   text-shadow: 0 20px 10px black;
 }
 
-.current-tab {
-  margin-top: 3.5em;
+.current-tab{
+ margin-top: 3.5em;
+ text-align: center;
 }
 
 .card {
@@ -210,8 +211,8 @@ span {
 .primary-btn {
   background-color: rgb(66, 42, 34);
   color: white;
-  padding: 0.2em 0.8em;
-  margin-top: 0.4em;
+  padding: 0.6em .8em;
+  margin-top: .4em;
   border: none;
   border-radius: 15px;
 }
@@ -250,7 +251,13 @@ span {
   padding: 1em;
 }
 
-.checkout {
+.checkout-elements{
+  border: 1px solid;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.checkout{
   display: grid;
   row-gap: 2em;
   grid-template-columns: repeat(12, 1fr);
