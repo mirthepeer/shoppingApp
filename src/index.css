@@ -45,11 +45,12 @@ nav {
 
 .current-tab{
  margin-top: 3.5em;
+ padding: 20px 0;
  text-align: center;
 }
 
 .card {
-  box-shadow: 0 0 10px;
+  box-shadow: 0 0 8px 0px rgb(0 0 0 / 20%);
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -57,7 +58,14 @@ nav {
   width: 80%;
   margin: 0 auto;
   padding: 0.5em;
+  transition: box-shadow 0.4s, transform 0.4s;
 }
+
+.card:hover {
+  box-shadow: 0 6px 16px 0px rgb(0 0 0 / 30%);
+  transform: translateY(-2px);
+}
+
 .ratings {
   font-size: 0.65rem;
   font-weight: 600;
@@ -226,7 +234,7 @@ span {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1em;
   column-gap: 0;
   padding: 0.75em;
