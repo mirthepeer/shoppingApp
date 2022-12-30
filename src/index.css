@@ -59,22 +59,60 @@ nav{
   text-align: center;
   width: 80%;
   margin: 0 auto;
+  padding: .50em;
 
 }
-.product-img{
+.ratings{
+  font-size: .65rem;
+  font-weight: 600;
+}
+
+.rating-count{
+  color: rgba(0, 0, 0, 0.527);
+  font-weight: 500;
+}
+.ri-delete-bin-7-fill:hover{
+  color: rgb(202, 92, 33);
+  cursor: pointer;
+}
+
+.hero{
+  background-color:rgb(66, 42, 34);
+  color: white;
+  padding: 4em;
+}
+
+.hero-description{
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.secondary-btn{
+  margin-top: 1em;
+  font-weight: 400;
+  background-color: rgb(230, 183, 124);
+  border: none;
+  padding: .5em 1em;
+  border-radius: 10px;
 
 }
 
 img{
   object-fit: cover;
-  max-width: 80px;
-  max-height: 150px;
+  width: 80px;
+  max-height: 160px;
+
 }
+
+.product-image{}
 
 .cart-item{
   color: rgba(0, 0, 0, 0.518);
   border-left: 1px solid;
   padding-left: .2em;
+  grid-column: 2/7;
+  align-self: center;
+  font-size: .75rem;
 }
 
 .item-checkout{
@@ -83,6 +121,18 @@ img{
   gap: 2em;
 }
 
+.wrapper{
+  padding: 1em;
+}
+.product-options{
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+}
+
+.qty{
+  font-weight: 100;
+}
 
 .cart-item-options{
   margin-left: auto;
@@ -95,8 +145,16 @@ span{
   font-style: italic;
 }
 
-.item-index{
-  font-weight: 800;
+
+
+.add-remove{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  grid-template-columns: repeat(auto-fit,1fr);
+
+  gap: .75em;
+  grid-column: 10/-1;
 }
 
 
@@ -107,17 +165,19 @@ span{
   font-size: .75rem;
 }
 
-.current-tab{
-  text-align: center;
-  font-size: 1rem;
-  color: rgb(66, 42, 34);
-}
 
 .product-description{
   padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.cart-item-price{
+  grid-column: 8/10;
+  align-self: center;
+  font-weight: 100;
+  font-size: .7rem;
 }
 
 .primary-btn{
@@ -143,15 +203,18 @@ span{
 }
 
 .container{
- margin-top: 3em;
  display: grid;
- grid-template-columns: repeat(3,1fr);
+ grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
  gap: 1em;
  column-gap: 0;
+ padding: .75em;
 }
 
 .item-index{
   align-self: center;
+  grid-column: 1/2;
+  font-weight: 800;
+  justify-self: center;
 }
 
 .cart-item-summary{
@@ -159,11 +222,19 @@ span{
   flex-direction: column;
 }
 
+
+
 .checkout-summary{
   text-align: center;
   align-items: center;
   gap: 1em;
   padding: 1em;
+}
+
+.checkout{
+  display: grid;
+  row-gap: 2em;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .flex{

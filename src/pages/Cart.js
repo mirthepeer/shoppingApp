@@ -24,20 +24,34 @@ export default function(){
         const qty = cart.filter(ye=>ye.id=== product.id).length // Actual unique item quantity in cart
         return (
             <>
-            <div className="item-checkout">
-            
-            <small className="item-index">{i+1}.</small>
-            <div className="cart-item-summary">
-            <small className="cart-item"><span>{product.title}</span> </small>
-            <small className="cart-item"> ${product.price} x {qty}</small>
-            </div>
-            <div className="cart-item-options">
-            <button onClick={()=>removeItem(product.id)} className="primary-btn">Remove</button>
-            <button onClick={()=>handleAdd(product)} className="primary-btn">Add +</button>
+            <div className="wrapper">
+            <div className="checkout">
+                <small className="item-index">{i+1}.</small>
+                <small className="cart-item"><span>{product.title}</span> </small>
+                <small className="cart-item-price"> ${product.price} x {qty}</small>
+                <div className="add-remove">
+                <button onClick={()=>removeItem(product.id)} className="primary-btn add"><i class="ri-delete-bin-7-fill"></i></button>
+                <button onClick={()=>handleAdd(product)} className="primary-btn remove"><i class="ri-add-circle-line"></i></button>
+                </div>
             </div>
             </div>
             <hr></hr>
-           </>
+            </>
+        //     <div className="checkout">
+        //     <div className="item-checkout">
+            
+        //     <small className="item-index">{i+1}.</small>
+        //     <div className="cart-item-summary">
+        //     <small className="cart-item"><span>{product.title}</span> </small>
+        //     <small className="cart-item"> ${product.price} x {qty}</small>
+        //     </div>
+        //     <div className="cart-item-options">
+        //     <button onClick={()=>removeItem(product.id)} className="primary-btn">Remove</button>
+        //     <button onClick={()=>handleAdd(product)} className="primary-btn">Add +</button>
+        //     </div>
+        //     </div>
+        //     <hr></hr>
+        //    </div>
         )
     })
 

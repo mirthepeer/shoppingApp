@@ -5,12 +5,15 @@ import { useContext } from 'react'
 
 export default function Nav(){
     const {cart} = useContext(Context)
+    const linkStyle = {textDecoration: 'none', color:' rgb(66, 42, 34)'}
+    const cartIcon = cart.length>0? <i class="ri-shopping-cart-fill">({cart.length})</i> : <i class="ri-shopping-cart-2-line"></i>
     return (
     <nav>
-        <Link style={{textDecoration: 'none', color:' rgb(66, 42, 34)', fontWeight:'800', paddingLeft:'.4em'}} to='/'>EZPlay</Link>
+        <Link style={{textDecoration: 'none', color:' rgb(66, 42, 34)', fontWeight:'800', paddingLeft:'.4em'}} to='/'>ShopEZ.</Link>
         <div className='nav-items'>
-            <Link style={{textDecoration: 'none', color:' rgb(66, 42, 34)'}} to='/products'>Products</Link>
-            <Link style={{textDecoration: 'none', color:' rgb(66, 42, 34)'}} to='/cart'>Cart({cart.length})</Link>
+            <Link style={linkStyle} to='/products'>About</Link>
+            <Link style={linkStyle} to='/products'>Products</Link>
+            <Link style={linkStyle} to='/cart'>{cartIcon}</Link>
       </div>
     </nav>
     )
