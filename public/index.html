@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,13 +14,115 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-   
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-   
+
     <title>Store App</title>
   </head>
   <body>
     <div id="root"></div>
-   
+    <div class="loading-screen">
+      <div class="ring">
+        ShopEZ.
+        <span class="main-spinner"></span>
+      </div>
+    </div>
   </body>
+  <style>
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      animation: loading-gradient 2s ease infinite;
+      /* background: radial-gradient(circle at 0% 100%, rgba(255, 244, 225, 1), rgba(95, 75, 69, 1)); */
+      background: radial-gradient(circle at 0 100%, rgb(255, 244, 225), rgb(219, 197, 160),rgba(255, 244, 225));
+      background-size: 200% 200%;
+      clip-path: circle(200% at 50% 50%);
+    }
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      background: transparent;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 150px;
+      font-family: sans-serif;
+      font-size: 20px;
+      color: rgb(53, 41, 37);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgb(53, 41, 37);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    .ring:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-top: 3px solid rgb(53, 41, 37);
+      border-right: 3px solid rgb(53, 41, 37);
+      border-radius: 50%;
+      animation: animateC 2s linear infinite;
+    }
+    .main-spinner {
+      display: block;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      width: 50%;
+      height: 4px;
+      background: transparent;
+      transform-origin: left;
+      animation: animate 2s linear infinite;
+    }
+    .main-spinner:before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgb(53, 41, 37);
+      top: -6px;
+      right: -8px;
+      box-shadow: 0 0 20px rgb(53, 41, 37);
+    }
+    @keyframes animateC {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes animate {
+      0% {
+        transform: rotate(45deg);
+      }
+      100% {
+        transform: rotate(405deg);
+      }
+    }
+    @keyframes loading-gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
 </html>
