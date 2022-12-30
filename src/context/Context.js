@@ -1,38 +1,36 @@
-import {createContext, useEffect, useState} from 'react'
+import { createContext, useEffect, useState } from 'react';
 
-const Context = createContext()
+const Context = createContext();
 
-function ContextProvider({children}){
+function ContextProvider({ children }) {
+  const [cart, setCart] = useState([]);
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, []);
 
-    const [cart, setCart] = useState([])
-    const [products, setProducts] = useState([])
-    useEffect(()=>{
-        fetch('https://fakestoreapi.com/products')
-        .then(res=>res.json())
-        .then(data=> setProducts(data))
-    },[])
+  function handleAdd(newItem) {
+    console.log(cart);
+    setCart(prev => [...prev, newItem]);
+  }
 
-    function handleAdd(newItem){
-        console.log(cart);
-        setCart(prev=>[...prev, newItem])
-    }
+  function removeItem(id) {
+    setCart(prev => prev.filter(prod => prod.id !== id));
+  }
 
-    function removeItem(id){
-        setCart(prev=> prev.filter(prod=>prod.id!==id))
-    }
+  function emptyCart() {
+    setCart([]);
+  }
 
-    function emptyCart(){
-        setCart([])
-    }
-
-    
-
-
-    return (
-        <Context.Provider value={{cart, products, handleAdd, removeItem, emptyCart}}>
-            {children}
-        </Context.Provider>
-    )
+  return (
+    <Context.Provider
+      value={{ cart, products, handleAdd, removeItem, emptyCart }}
+    >
+      {children}
+    </Context.Provider>
+  );
 }
 
-export {Context, ContextProvider}
+export { Context, ContextProvider };
