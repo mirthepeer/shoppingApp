@@ -19,7 +19,7 @@ export default function Home() {
           <button className="secondary-btn">Browse Products</button>
         </Link>
       </div>
-      <a href="https://www.freepik.com/free-vector/online-shopping-concept-illustration_7010823.htm#query=shopping&position=3&from_view=search&track=sph">
+      <a style={{visibility: 'hidden'}} href="https://www.freepik.com/free-vector/online-shopping-concept-illustration_7010823.htm#query=shopping&position=3&from_view=search&track=sph">
         Image by storyset
       </a>{' '}
       on Freepik
