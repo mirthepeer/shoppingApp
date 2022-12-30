@@ -11,7 +11,7 @@ export default function Nav(){
     <nav>
         <Link style={{textDecoration: 'none', color:' rgb(66, 42, 34)', fontWeight:'800', paddingLeft:'.4em'}} to='/'>ShopEZ.</Link>
         <div className='nav-items'>
-            <Link style={linkStyle} to='/products'>About</Link>
+            <Link style={linkStyle} to='/about'>About</Link>
             <Link style={linkStyle} to='/products'>Products</Link>
             <Link style={linkStyle} to='/cart'>{cartIcon}</Link>
       </div>
