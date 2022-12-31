@@ -1,5 +1,3 @@
-import Cart from "../pages/Cart";
-
 import {Link} from 'react-router-dom'
 export default function Product({item, handleAdd, cart, removeItem}){
     const {rate, count} = item.rating

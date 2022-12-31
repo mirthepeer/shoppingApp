@@ -1,10 +1,7 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes} from 'react-router-dom';
 import gsap from 'gsap';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import Cart from './pages/Cart';
 import Nav from './components/Nav';
-import ProductDescription from './pages/ProductDescription';
+import { routes } from './config/routes';
 
 window.addEventListener('load', () => {
   gsap
@@ -15,14 +12,19 @@ window.addEventListener('load', () => {
 });
 
 function App() {
+  const myRoutes = routes.map(route=>{
+    return (
+      <>
+      {route}
+      </>
+    )
+  })
+  
   return (
     <>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/products/:id" element={<ProductDescription />} />
+        {myRoutes}
       </Routes>
     </>
   );
