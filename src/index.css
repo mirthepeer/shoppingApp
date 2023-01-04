@@ -286,16 +286,18 @@ span {
 }
 
 .checkout-elements{
-  border: 1px solid;
   width: 95%;
   margin: 0 auto;
 }
+
 
 .checkout{
   display: grid;
   row-gap: 2em;
   grid-template-columns: repeat(12, 1fr);
 }
+
+
 
 .flex {
   display: flex;

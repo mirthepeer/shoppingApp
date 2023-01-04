@@ -5,6 +5,7 @@ const Context = createContext()
 function ContextProvider({children}){
 
     const [cart, setCart] = useState([])
+    const [categories, setCategories] = useState([])
     const [products, setProducts] = useState([])
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products')
@@ -29,7 +30,7 @@ function ContextProvider({children}){
 
 
     return (
-        <Context.Provider value={{cart, products, handleAdd, removeItem, emptyCart}}>
+        <Context.Provider value={{cart, products, handleAdd, removeItem, emptyCart, categories}}>
             {children}
         </Context.Provider>
     )
