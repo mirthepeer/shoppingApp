@@ -9,7 +9,7 @@ export default function ProductDescription(){
     const thisProduct = products.find(item=>item.id === parseInt(id))
     const{ title, description, price} = thisProduct
     return(
-        <div className='item-detail container'>
+        <div className='current-tab item-detail container'>
         <h4>{title}</h4>
         <small>{description}</small>
         <small>{price}</small>

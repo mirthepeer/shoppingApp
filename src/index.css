@@ -29,6 +29,9 @@ small {
   text-align: center;
 }
 
+.category-item{
+  text-transform: capitalize;
+}
 nav {
   position: fixed;
   z-index: 99;
@@ -47,7 +50,7 @@ nav {
 }
 
 .current-tab{
- margin-top: 3.5em;
+ margin-top: 4.5em;
  padding: 20px 0;
  text-align: center;
 }

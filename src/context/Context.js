@@ -13,6 +13,12 @@ function ContextProvider({children}){
         .then(data=> setProducts(data))
     },[])
 
+    useEffect(()=>{
+        fetch('https://fakestoreapi.com/products/categories')
+        .then(res=>res.json())
+        .then(data=> setCategories(data))
+    },[])
+
     function handleAdd(newItem){
         console.log(cart);
         setCart(prev=>[...prev, newItem])
@@ -25,12 +31,13 @@ function ContextProvider({children}){
     function emptyCart(){
         setCart([])
     }
+    
 
     
 
 
     return (
-        <Context.Provider value={{cart, products, handleAdd, removeItem, emptyCart, categories}}>
+        <Context.Provider value={{cart, products, handleAdd, removeItem, emptyCart, categories,setProducts}}>
             {children}
         </Context.Provider>
     )
