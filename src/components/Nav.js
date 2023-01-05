@@ -11,10 +11,10 @@ export default function Nav(){
     <nav>
         <Link style={{textDecoration: 'none', color:' rgb(66, 42, 34)', fontSize:'1.8rem', fontWeight:'800', paddingLeft:'.4em'}} to='/'>ShopEZ.</Link>
         <div className='nav-items'>
-            <Link style={linkStyle} to='/categories'>Categories</Link>
-            <Link style={linkStyle} to='/about'>About</Link>
-            <Link style={linkStyle} to='/products'>Products</Link>
-            <Link style={linkStyle} to='/cart'>{cartIcon}</Link>
+            <Link style={linkStyle} to='/categories'><p className='nav-item'>Categories</p></Link>
+            <Link style={linkStyle} to='/about'><p className='nav-item'>About</p></Link>
+            <Link style={linkStyle} to='/products'><p className='nav-item'>Products</p></Link>
+            <Link style={linkStyle} to='/cart'><p className='nav-item'>{cartIcon}</p></Link>
       </div>
     </nav>
     )

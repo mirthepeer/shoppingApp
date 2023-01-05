@@ -180,7 +180,6 @@ img {
   padding-left: 0.2em;
   grid-column: 2/7;
   align-self: center;
-  font-size: 0.75rem;
 }
 
 .item-checkout {
@@ -242,7 +241,6 @@ span {
   grid-column: 8/10;
   align-self: center;
   font-weight: 100;
-  font-size: 0.7rem;
 }
 
 .primary-btn {
@@ -257,8 +255,32 @@ span {
 .nav-items {
   margin-left: auto;
   display: flex;
-  gap: 1em;
+  gap: 1.8em;
   padding: 1em;
+}
+
+.nav-item{
+  display: inline-block;
+  position: relative;
+
+}
+
+.nav-item::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(66, 42, 34);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .container {
@@ -293,11 +315,15 @@ span {
   margin: 0 auto;
 }
 
+.cart-item-price{
+  font-size: 1.25rem;
+}
 
 .checkout{
   display: grid;
   row-gap: 2em;
   grid-template-columns: repeat(12, 1fr);
+  font-size: 1.75rem;
 }
 
 
