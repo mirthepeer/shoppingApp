@@ -25,7 +25,7 @@ export default function Products(){
 
     return (
         <>
-        <div className="current-tab">
+        <div className="current-tab center">
         <h1 >Products Page</h1>
         </div>
         <hr></hr>
