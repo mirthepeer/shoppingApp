@@ -29,7 +29,7 @@ export default function CategoryItems() {
   return (
     <>
       <div className="current-tab">
-        <h1>
+        <h1 className='center'>
           Shop <span className="category-item">{category}</span>
         </h1>
       </div>
