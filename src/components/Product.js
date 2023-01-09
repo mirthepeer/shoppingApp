@@ -13,10 +13,10 @@ export default function Product({item, handleAdd, cart, removeItem}){
             
             
             <div className="product-description">
-                <div className="product-options">
-                    <i onClick={()=>handleAdd(item)} class="ri-add-circle-line"></i>
-                    <small className="qty"> - {cart.filter(ye=>ye.id===item.id).length} - </small>
-                    <i  onClick={()=>removeItem(item.id)} class="ri-delete-bin-7-line"></i>
+                <div className="buttons">
+                    <i onClick={()=>handleAdd(item)} class="ri-add-circle-line small"></i>
+                    <small className="qty small">{cart.filter(ye=>ye.id===item.id).length}</small>
+                    <i  onClick={()=>removeItem(item.id)} class="ri-delete-bin-7-line small"></i>
                 </div>
             </div>
 

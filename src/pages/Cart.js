@@ -18,7 +18,7 @@ export default function(){
     
 
     
-    const uniqueProducts = [... new Set(cart)] //Removing duplicate items in cart to display each item once 
+    const uniqueProducts = [...new Set(cart)] //Removing duplicate items in cart to display each item once 
 
     const CheckoutElemets = uniqueProducts.map((product, i)=>{
         const qty = cart.filter(ye=>ye.id=== product.id).length // Actual unique item quantity in cart
@@ -30,8 +30,8 @@ export default function(){
                 <small className="cart-item"><span>{product.title}</span> </small>
                 <small className="cart-item-price"> ${product.price} x {qty}</small>
                 <div className="add-remove">
-                <i onClick={()=>removeItem(product.id)} className="primary-btn add" class="ri-delete-bin-7-fill"></i>
-                <i onClick={()=>handleAdd(product)}  class="ri-add-circle-line"></i>
+                <i onClick={()=>removeItem(product.id)} className="primary-btn add normal" class="ri-delete-bin-7-fill"></i>
+                <i onClick={()=>handleAdd(product)}  class="ri-add-circle-line normal"></i>
                 </div>
             </div>
             </div>
@@ -61,7 +61,7 @@ export default function(){
 
     return (
         <>
-        <div className="current-tab">
+        <div className="current-tab center">
         <h3>Check Out</h3>
         {message}
         
@@ -73,7 +73,7 @@ export default function(){
         <div className="checkout-summary flex flex-column">
         {checkoutBtn}
 
-        <p>{cart.length > 0 && `Total: ${formatter.format(total)} `}</p>
+        {cart.length > 0 && <p className="total"><span>Total: </span>{formatter.format(total)}</p>}
         </div>
        
         </>
