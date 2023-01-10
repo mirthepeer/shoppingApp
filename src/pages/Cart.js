@@ -62,7 +62,7 @@ export default function(){
     return (
         <>
         <div className="current-tab center">
-        <h3 className="accent">Check Out</h3>
+        <h3 className="accent heading">Check Out</h3>
         {message}
         
         

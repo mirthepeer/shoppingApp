@@ -7,12 +7,13 @@ export default function Product({item, handleAdd, cart, removeItem}){
         
         <div className="card flex-column">
              <Link to={`/products/${item.id}`} className="product-link">
-            <div className="card-backdrop" />
-            <div className="product-img">
-                <img src={item.image}/> 
-            </div>
-            <small className="ratings">{rate}⭐<span className="rating-count">({count})</span></small>
-           <h4 className="product-title">{item.title} </h4></Link> 
+                <div className="card-backdrop" />
+                <div className="product-img">
+                    <img src={item.image}/> 
+                </div>
+                <small className="ratings">{rate}⭐<span className="rating-count">({count})</span></small>
+            <h4 className="product-title">{item.title} </h4>
+           </Link> 
             <h4 className="product-title">${item.price}</h4>
             
             
