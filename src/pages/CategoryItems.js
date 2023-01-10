@@ -13,7 +13,7 @@ export default function CategoryItems() {
   useEffect(() => {
     getCategoryProducts(category);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [category]);
 
   const catagoryItemsList =
     categoryProducts[category] &&
