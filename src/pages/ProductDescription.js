@@ -29,7 +29,7 @@ export default function ProductDescription(){
         <>
         <div className='current-tab'>
             <div className='item-detail'>
-                <h1 className='item-title'>{title}</h1>
+                <h1 className='item-title accent'>{title}</h1>
                 <img src={image}></img>
                 <p className='item-description'>{description}</p>
                 <p>{rate} ⭐ <span className='rating-count'>({count})</span></p>
@@ -44,7 +44,7 @@ export default function ProductDescription(){
         </div>
         </div>
         <div className='suggestions'>
-            <h2 className='center'>You may also like</h2>
+            <h2 className='center accent'>You may also like</h2>
             <div className='container'>
                 {suggestedItems}
             </div>
