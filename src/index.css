@@ -13,6 +13,7 @@ body,html {
   -moz-osx-font-smoothing: grayscale;
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: .75rem;
   
 }
 
@@ -446,4 +447,15 @@ span {
     top: -70px;
     left: calc(100% - 110px)
   }
+  .hero-description{
+   padding: 2em;
+   font-size: 1.2rem;
+  }
+ 
 }
+
+@media screen and (max-width: 600px) {
+
+
+}
+

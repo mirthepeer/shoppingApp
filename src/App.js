@@ -2,6 +2,7 @@ import { Routes} from 'react-router-dom';
 import gsap from 'gsap';
 import Nav from './components/Nav';
 import { routes } from './config/routes';
+import ScrollToTop from './utils/ScrollToTop';
 
 window.addEventListener('load', () => {
   gsap
@@ -22,6 +23,7 @@ function App() {
   
   return (
     <>
+      <ScrollToTop/>
       <Nav />
       <Routes>
         {myRoutes}
