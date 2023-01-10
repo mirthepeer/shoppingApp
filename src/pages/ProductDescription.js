@@ -25,13 +25,6 @@ export default function ProductDescription(){
         )
     })
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
-
-    
-
-
     return(
         <>
         <div className='current-tab'>

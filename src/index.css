@@ -6,9 +6,7 @@
 }
 body,html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 100vw;
@@ -69,7 +67,7 @@ nav {
 }
 
 .current-tab{
- margin-top: 4.5em;
+ margin-top: 3em;
  padding: 20px 0;
 }
 
@@ -206,11 +204,17 @@ nav {
 }
 
 .buttons{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(50px, 65px));
   font-size: 1.4rem;
   gap: .2em;
+  text-align: center;
+  transition: 350ms;
+}
+
+.ri-add-circle-line.ri-delete-bin-7-line:hover{
+  cursor: pointer;
+  
 }
 
 .small{
@@ -220,7 +224,6 @@ nav {
 .ri-add-circle-line, .ri-delete-bin-7-line, .qty{
   border: 1px solid;
   padding: 1em;
-  height: 100%;
   border-radius: 2px;
 
 }
@@ -266,7 +269,7 @@ img {
 }
 
 .qty {
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .cart-item-options {
@@ -307,7 +310,7 @@ span {
 .cart-item-price {
   grid-column: 8/10;
   align-self: center;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .primary-btn {

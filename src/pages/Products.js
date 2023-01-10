@@ -28,7 +28,6 @@ export default function Products(){
         <div className="current-tab center">
         <h1 className="accent">Shop All Products</h1>
         </div>
-        <hr></hr>
         <div className="container">
         {productElements}
         </div>
