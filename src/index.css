@@ -399,7 +399,9 @@ span {
   font-size: 1.25rem;
 }
 
-
+.accent{
+  color: rgb(66, 42, 34);
+}
 
 .flex {
   display: flex;

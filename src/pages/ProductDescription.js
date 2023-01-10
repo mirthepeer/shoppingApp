@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom' 
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { Context } from '../context/Context'
 import Product from '../components/Product'
 
@@ -11,7 +11,7 @@ export default function ProductDescription(){
     const{ title, description, price, image} = thisProduct
     const {rate, count} = thisProduct.rating
     const qty = cart.filter(item=>item.id === parseInt(id)).length
-    const suggestions = products.filter(item=> item.id!= id)
+    const suggestions = products.filter(item=> item.id!= id && item.category===thisProduct.category)
     const suggestedItems = suggestions.map(item=>{
         return (
             <Product 
@@ -24,6 +24,10 @@ export default function ProductDescription(){
             
         )
     })
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     
 

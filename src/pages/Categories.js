@@ -17,7 +17,7 @@ export default function Categories(){
     
     return (
         <div className="current-tab center">
-        <h1>Catagories Page</h1>
+        <h1 className="accent">Shop Categories</h1>
         {categoryList}
         </div>
         )
