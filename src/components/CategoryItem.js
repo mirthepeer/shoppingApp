@@ -14,12 +14,14 @@ export default function CartegoryItem({category}){
     }
     
     return (
-        <div className='card padding'>
         <Link className='accent' to={`/categories/${category}`} style={linkStyle}>
+        <div className='card padding category'>
+        
             <i class={icon}></i>
             <p className="category-item">{category}</p>
 
-        </Link> 
+       
         </div>
+        </Link> 
     )
 }
