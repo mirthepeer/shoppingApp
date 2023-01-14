@@ -532,6 +532,9 @@ span {
     display: none;
   }
   
+  .nav-item{
+    margin: .5em;
+  }
 
   .nav-responsive{
     display: flex;
