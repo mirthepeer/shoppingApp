@@ -8,7 +8,13 @@ import BarLoader from "react-spinners/BarLoader";
 
 export default function CategoryItems() {
   const { category } = useParams();
-  const { handleAdd, cart, removeItem, getCategoryProducts, categoryProducts, categories } = useContext(Context);
+  const { 
+    handleAdd,
+    cart,
+    removeItem,
+    getCategoryProducts,
+    categoryProducts,
+    categories } = useContext(Context);
   
   useEffect(() => {
     getCategoryProducts(category);

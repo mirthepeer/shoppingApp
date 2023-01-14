@@ -27,6 +27,7 @@ small {
   width: 75%;
   margin: 0 auto;
   justify-content: space-between;
+  font-weight: 300;
 }
 
 .item-description{
@@ -264,6 +265,7 @@ nav {
   font-size: 2rem;
 }
 
+
 .large{
   font-size: 3.5rem;
 }
@@ -308,6 +310,10 @@ img {
 
 .qty {
   font-weight: 200;
+}
+
+.hamburger{
+  display: none;
 }
 
 .cart-item-options {
@@ -507,6 +513,49 @@ span {
 }
 
 @media screen and (max-width: 600px) {
+  .hamburger{
+    display: block;
+    margin-left: auto;
+    margin-right: .4em;
+    align-self: center;
+    font-size: 1.3rem;
+    
+  }
+
+  
+  
+  .off{
+    display: none;
+  }
+  
+
+  .nav-responsive{
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+  }
+  
+  .display{
+   display: none;
+    
+  }
+  
+  nav{
+    flex-direction: column;
+    width: 100%;
+
+    
+
+  }
+
+  .nav-items{
+    flex-direction: column;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
 
 
 }

@@ -56,7 +56,7 @@ export default function(){
     })
 
     const message = cart.length === 0 && <p className="light-weight">Your cart is empty</p>
-    const checkoutBtn = cart.length>0 &&  <button className="primary-btn center">Place Order</button>
+    const checkoutBtn = cart.length>0 &&  <button onClick={()=>emptyCart()} className="primary-btn center">Place Order</button>
         
 
     return (
