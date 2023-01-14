@@ -34,7 +34,7 @@ export default function ProductDescription(){
                 <img src={image}></img>
                 <p className='item-description'>{description}</p>
                 
-                <p>${price}</p>
+                <p className='bold'>${price}</p>
                 <div className='buttons'>
                     <i onClick={()=>handleAdd(thisProduct)} class="ri-add-circle-line"></i>
                     <p className="qty">{qty}</p>

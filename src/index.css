@@ -126,9 +126,6 @@ nav {
   font-weight: 600;
   letter-spacing: 1px;
 }
-.rating{
-
-}
 
 .rating-count {
   color: rgba(0, 0, 0, 0.527);
@@ -483,6 +480,11 @@ span {
 
 .gap {
   gap: 1em;
+}
+
+.bold{
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .flex-wrap {
