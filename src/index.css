@@ -35,6 +35,8 @@ small {
   font-size: 1.4rem;
   align-self: center;
   letter-spacing: 1px;
+  color: rgba(66, 42, 34, 0.721);
+  line-height: 2.5rem;
 }
 
 .item-title{
