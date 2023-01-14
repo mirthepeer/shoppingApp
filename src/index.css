@@ -87,7 +87,14 @@ nav {
   padding: 0.5em;
   position: relative;
   transition: box-shadow 0.4s, transform 0.4s, border-radius 0.4s;
+  gap: 1em;
   
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  gap: .45em;
 }
 
 .card:hover {
@@ -115,8 +122,12 @@ nav {
 }
 
 .ratings {
-  font-size: 0.65rem;
+  font-size: .85rem;
   font-weight: 600;
+  letter-spacing: 1px;
+}
+.rating{
+
 }
 
 .rating-count {
@@ -220,6 +231,7 @@ nav {
   gap: .2em;
   text-align: center;
   transition: 350ms;
+  margin: 0 auto;
 }
 
 .ri-add-circle-line:hover, .ri-delete-bin-7-line:hover{
@@ -341,7 +353,7 @@ span {
 }
 .product-title {
   color: rgb(66, 42, 34);
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 .product-description {

@@ -30,9 +30,10 @@ export default function ProductDescription(){
         <div className='current-tab'>
             <div className='item-detail'>
                 <h1 className='item-title accent'>{title}</h1>
+                <p className='rating'>{rate} ⭐ <span className='rating-count'>({count})</span></p>
                 <img src={image}></img>
                 <p className='item-description'>{description}</p>
-                <p>{rate} ⭐ <span className='rating-count'>({count})</span></p>
+                
                 <p>${price}</p>
                 <div className='buttons'>
                     <i onClick={()=>handleAdd(thisProduct)} class="ri-add-circle-line"></i>
