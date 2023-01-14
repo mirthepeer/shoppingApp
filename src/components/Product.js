@@ -10,7 +10,7 @@ export default function Product({item, handleAdd, cart, removeItem}){
              <Link style={linkStyle} to={`/products/${item.id}`} className="product-link">
                 <div className='description'>
                 <h4 className="product-title">{item.title} </h4>
-                <p className="ratings">{rate}⭐<span className="rating-count">({count})</span></p>
+                <p className="ratings accent">{rate}⭐<span className="rating-count">({count})</span></p>
                 <div className="card-backdrop" />
                 <div className="product-img">
                     <img src={item.image}/> 
