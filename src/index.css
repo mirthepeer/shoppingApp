@@ -481,6 +481,10 @@ span {
   font-size: 1.5rem;
 }
 
+.display-sm{
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
   .jumbotron-landing {
     height: 50vh;
@@ -512,7 +516,7 @@ span {
  
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
   .hamburger{
     display: block;
     margin-left: auto;
@@ -539,6 +543,10 @@ span {
   .display{
    display: none;
     
+  }
+
+  .display-sm{
+    display: block;
   }
   
   nav{

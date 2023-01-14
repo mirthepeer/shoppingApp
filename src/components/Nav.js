@@ -38,7 +38,7 @@ export default function Nav(){
         {hamburgerIcon}
         </div>
         
-        <div className='nav-items'>
+        <div className='nav-items display-sm'>
             <Link onClick={()=>toggleNav()}  style={linkStyle} to='/categories'><p className='nav-item'>Categories</p></Link>
             <Link onClick={()=>toggleNav()} style={linkStyle} to='/about'><p className='nav-item'>About</p></Link>
             <Link onClick={()=>toggleNav()} style={linkStyle} to='/products'><p className='nav-item'>Products</p></Link>
@@ -46,8 +46,9 @@ export default function Nav(){
            
       </div>
       <div className='nav-items display'>
-            <Link style={{...linkStyle, display: 'block'}} to='/categories'><p className='nav-item'>Categories</p></Link>
             <Link style={{...linkStyle, display: 'block'}} to='/about'><p className='nav-item'>About</p></Link>
+            <Link style={{...linkStyle, display: 'block'}} to='/categories'><p className='nav-item display'>Categories</p></Link>
+           
             <Link style={{...linkStyle, display: 'block'}} to='/products'><p className='nav-item'>Products</p></Link>
             <Link style={{...linkStyle, display: 'block'}} to='/cart'><p className='nav-item'>{cartIcon}</p></Link>
            
