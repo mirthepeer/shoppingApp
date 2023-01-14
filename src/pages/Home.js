@@ -18,7 +18,7 @@ export default function Home() {
         </p>
         
         <Link style={linkStyle} to="/products">
-          <button className="secondary-btn">Browse Products</button>
+          <button className="secondary-btn accent">Browse Products</button>
         </Link>
         </div>
       </div>

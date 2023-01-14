@@ -485,6 +485,10 @@ span {
   display: none;
 }
 
+.border-bottom{
+  border: none;
+}
+
 @media screen and (max-width: 900px) {
   .jumbotron-landing {
     height: 50vh;
@@ -541,6 +545,10 @@ span {
     width: 100%;
     align-items: center;
 
+  }
+
+  .border-bottom{
+    box-shadow: 0 0 3px;
   }
   
   .display{

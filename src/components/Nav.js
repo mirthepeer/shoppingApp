@@ -33,14 +33,14 @@ export default function Nav(){
 
     return (
     <nav>
-        <div className='nav-responsive'>
+        <div className={`nav-responsive ${toggle? 'border-bottom' : ''}`}>
         <Link style={{textDecoration: 'none', color:' rgb(66, 42, 34)', fontSize:'1.8rem', fontWeight:'800', paddingLeft:'.4em'}} to='/'>ShopEZ.</Link>
         {hamburgerIcon}
         </div>
         
         <div className='nav-items display-sm'>
-            <Link onClick={()=>toggleNav()}  style={linkStyle} to='/categories'><p className='nav-item'>Categories</p></Link>
             <Link onClick={()=>toggleNav()} style={linkStyle} to='/about'><p className='nav-item'>About</p></Link>
+            <Link onClick={()=>toggleNav()}  style={linkStyle} to='/categories'><p className='nav-item'>Categories</p></Link>
             <Link onClick={()=>toggleNav()} style={linkStyle} to='/products'><p className='nav-item'>Products</p></Link>
             <Link onClick={()=>toggleNav()} style={linkStyle} to='/cart'><p className='nav-item'>{cartIcon}</p></Link>
            
