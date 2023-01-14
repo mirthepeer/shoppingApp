@@ -565,6 +565,10 @@ span {
     padding: 0;
   }
 
+  .padding{
+    padding: 2em;
+  }
+
 
 }
 
