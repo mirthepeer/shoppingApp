@@ -596,6 +596,14 @@ span {
     padding: 2em;
   }
 
+  .item-description{
+    font-size: 1rem;
+  }
+
+  .item-detail{
+    padding: 0;
+  }
+  
 
 }
 
