@@ -512,6 +512,9 @@ span {
   justify-content: center;
   align-items: center;
   margin: auto 0;
+  text-shadow: 0 0 20px #fff;
+  color: rgb(51, 33, 27);
+  letter-spacing: .5px;
 }
 .centered-div {
   display: flex;
