@@ -540,6 +540,11 @@ span {
     margin-right: 0.4em;
     align-self: center;
     font-size: 1.3rem;
+    transition: 0.5s;
+  }
+
+  .hamburger:hover{
+    background-color: rgba(230, 182, 124, 0.26);
   }
 
   .off {
