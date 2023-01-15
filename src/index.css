@@ -328,6 +328,7 @@ img {
   display: none;
 }
 
+
 .cart-item-options {
   margin-left: auto;
   display: flex;
@@ -428,6 +429,7 @@ span {
   text-transform: capitalize;
 }
 
+
 .item-index {
   align-self: center;
   grid-column: 1/1;
@@ -467,6 +469,41 @@ span {
   color: rgb(66, 42, 34);
 }
 
+.order-placed{
+  position: fixed;
+  height: 50vh;
+  width: 50%;
+  background-color: rgba(230, 182, 124, 0.443);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  box-shadow: 0 0 3px;
+
+}
+
+.cross-icon{
+  align-self: flex-end;
+  padding: .5em;
+}
+
+.cross-icon:hover{
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.491);
+  border-radius: 10px;
+}
+
+.order-status{
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+}
 .centered-div {
   display: flex;
   justify-content: center;
@@ -543,8 +580,11 @@ span {
     transition: 0.5s;
   }
 
+  .order-placed{
+    width: 80%;
+  }
   .hamburger:hover{
-    background-color: rgba(230, 182, 124, 0.26);
+    background-color: rgba(128, 128, 128, 0.491);
   }
 
   .off {

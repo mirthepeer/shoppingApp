@@ -1,22 +1,41 @@
 
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { Context } from "../context/Context"
 import { useState } from "react"
+import BarLoader from "react-spinners/BarLoader";
 
 export default function(){
-    const {cart, removeItem, emptyCart, handleAdd} = useContext(Context)
-
-    const [orderPlaced, setOrderPlaced] = useState(false)
+    const {cart, removeItem, emptyCart, handleAdd, orderPlaced, setOrderPlaced} = useContext(Context)
+    const [showBox, setShowbox] = useState(false)
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
     })
 
+   useEffect(()=>{
+    setOrderPlaced(false)
+   },[])
+
+    function placeOrder(){
+        setShowbox(true)
+        setTimeout(emptyCart,2000)
+       
+        
+    }
+
+
     const total = cart.length > 0 ? cart.map(product=> product.price * product.qty).reduce((a, b) => {
         return a + b;
       }) : 0
     
-
+      let orderMessage =  orderPlaced? 'Your order is on its way!' : 
+      <BarLoader
+      color={	`#422a22`}
+      loading={true}
+      size={65}
+      aria-label="Loading Spinner"
+      data-testid="loader"
+    />
         const CheckoutElemets = cart.map((product, i)=>{
         const qty = cart.find(item=>item.id ===product.id).qty
         return (
@@ -34,27 +53,18 @@ export default function(){
             </div>
             <hr></hr>
             </>
-        //     <div className="checkout">
-        //     <div className="item-checkout">
-            
-        //     <small className="item-index">{i+1}.</small>
-        //     <div className="cart-item-summary">
-        //     <small className="cart-item"><span>{product.title}</span> </small>
-        //     <small className="cart-item"> ${product.price} x {qty}</small>
-        //     </div>
-        //     <div className="cart-item-options">
-        //     <button onClick={()=>removeItem(product.id)} className="primary-btn">Remove</button>
-        //     <button onClick={()=>handleAdd(product)} className="primary-btn">Add +</button>
-        //     </div>
-        //     </div>
-        //     <hr></hr>
-        //    </div>
+        
         )
     })
 
     const message = cart.length === 0 && <p className="light-weight">Your cart is empty</p>
-    const checkoutBtn = cart.length>0 &&  <button onClick={()=>emptyCart()} className="primary-btn center">Place Order</button>
-        
+    const checkoutBtn = cart.length>0 &&  <button onClick={()=>placeOrder()} className="primary-btn center">Place Order</button>
+    const boxVisiblityStyle =  {display: showBox? '' : 'none' } 
+    function closeBox(){
+        setShowbox(false)
+        setOrderPlaced(false)
+
+    }
 
     return (
         <>
@@ -71,6 +81,12 @@ export default function(){
         {checkoutBtn}
 
         {cart.length > 0 && <p className="total"><span>Total: </span>{formatter.format(total)}</p>}
+        </div>
+
+        <div style={boxVisiblityStyle} className="order-placed">
+        <i onClick={() => closeBox()} class="ri-close-line cross-icon"></i>
+        <p className="order-status">{orderMessage}</p>
+
         </div>
        
         </>

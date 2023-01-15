@@ -9,7 +9,8 @@ export default function ProductDescription() {
   const thisProduct = products.find((item) => item.id === parseInt(id));
   const { title, description, price, image } = thisProduct;
   const { rate, count } = thisProduct.rating;
-  const qty = cart.filter((item) => item.id === parseInt(id)).length;
+  const thisProductInCart = cart.find(item=>item.id === thisProduct.id)
+  const qty = thisProductInCart ?  thisProductInCart.qty : 0
   const suggestions = products.filter(
     (item) => item.id != id && item.category === thisProduct.category
   );
@@ -54,6 +55,7 @@ export default function ProductDescription() {
         <h2 className="center accent">You may also like</h2>
         <div className="container">{suggestedItems}</div>
       </div>
+
     </>
   );
 }

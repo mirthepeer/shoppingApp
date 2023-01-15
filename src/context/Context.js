@@ -7,6 +7,7 @@ function ContextProvider({ children }) {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [categoryProducts, setCategoryProducts] = useState({});
+  const [orderPlaced, setOrderPlaced] = useState(false)
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -42,6 +43,7 @@ function ContextProvider({ children }) {
   }
 
   function emptyCart() {
+    setTimeout(setOrderPlaced(true),2000)
     setCart([]);
   }
 
@@ -64,7 +66,9 @@ function ContextProvider({ children }) {
         categories,
         setProducts,
         categoryProducts,
-        getCategoryProducts
+        getCategoryProducts,
+        orderPlaced,
+        setOrderPlaced
       }}
     >
       {children}
