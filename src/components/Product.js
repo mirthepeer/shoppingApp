@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 export default function Product({ item, handleAdd, cart, removeItem }) {
   const { rate, count } = item.rating;
-  const qty = cart.filter((ye) => ye.id === item.id).length;
+  const inCart = cart.find((ye) => ye.id === item.id)
+  const qty = inCart ? inCart.qty : 0
   const qtyStyle = { fontWeight: qty > 0 ? "400" : "" };
   const linkStyle = { textDecoration: "none" };
+  console.log(qty);
   return (
     <div className="card flex-column">
       <Link

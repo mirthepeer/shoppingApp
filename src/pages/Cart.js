@@ -12,16 +12,13 @@ export default function(){
         currency: 'USD',
     })
 
-    const total = cart.length > 0 ? cart.map(product=> product.price).reduce((a, b) => {
+    const total = cart.length > 0 ? cart.map(product=> product.price * product.qty).reduce((a, b) => {
         return a + b;
       }) : 0
     
 
-    
-    const uniqueProducts = [...new Set(cart)] //Removing duplicate items in cart to display each item once 
-
-    const CheckoutElemets = uniqueProducts.map((product, i)=>{
-        const qty = cart.filter(ye=>ye.id=== product.id).length // Actual unique item quantity in cart
+        const CheckoutElemets = cart.map((product, i)=>{
+        const qty = cart.find(item=>item.id ===product.id).qty
         return (
             <>
             <div className="wrapper">

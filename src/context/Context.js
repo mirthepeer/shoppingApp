@@ -21,9 +21,21 @@ function ContextProvider({ children }) {
   }, []);
 
   function handleAdd(newItem) {
-    console.log(cart);
-    setCart(prev => [...prev, newItem]);
+    cart.find(item=>item.id===newItem.id)?
+    setCart(prev=>{ return(
+      prev.map(prev=>{
+        return (
+          prev.id === newItem.id? {...prev, qty: prev.qty + 1} : prev
+        )
+      })
+    )
+      
+    }) :  
+    setCart(prev => [...prev, {...newItem, qty: 1}]) 
+
+    console.log(cart)
   }
+
 
   function removeItem(id) {
     setCart(prev => prev.filter(prod => prod.id !== id));

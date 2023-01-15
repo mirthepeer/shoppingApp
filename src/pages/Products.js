@@ -3,13 +3,8 @@ import { Context } from "../context/Context";
 import Product from "../components/Product";
 
 export default function Products() {
-  const { products, handleAdd, cart, removeItem, setProducts } =
-    useContext(Context);
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+  const { products, handleAdd, cart, removeItem } = useContext(Context);
+  console.log(products)
 
   const productElements = products.map((item) => {
     return (
