@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 export default function Home() {
-  const linkStyle = { textDecoration: 'none' };
+  const linkStyle = { textDecoration: "none" };
   return (
     <div className="current-tab">
       <div className="jumbotron-landing">
@@ -12,17 +12,17 @@ export default function Home() {
       </div>
       <div className="hero">
         <div className="hero-description">
-        <p>
-          Shop with us for clothing, jewelry, and electronics. Wide selection,
-          competitive prices. Excellent customer service.
-        </p>
-        
-        <Link style={linkStyle} to="/products">
-          <button className="secondary-btn accent">Browse Products</button>
-        </Link>
+          <p>
+            Shop with us for clothing, jewelry, and electronics. Wide selection,
+            competitive prices. Excellent customer service.
+          </p>
+
+          <Link style={linkStyle} to="/products">
+            <button className="secondary-btn accent">Browse Products</button>
+          </Link>
         </div>
       </div>
-      <span style={{ visibility: 'hidden' }}>
+      <span style={{ visibility: "hidden" }}>
         <a href="https://www.freepik.com/free-vector/online-shopping-concept-illustration_7010823.htm#query=shopping&position=3&from_view=search&track=sph">
           Image by storyset
         </a>
