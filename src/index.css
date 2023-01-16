@@ -529,6 +529,7 @@ span {
 
 .orders-list{
   border-radius: 10px;
+  margin-top: .3rem;
 }
 
 .ordered-item{
