@@ -1,4 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
+import uuid from 'react-uuid'
+
 
 const Context = createContext();
 
@@ -8,6 +10,7 @@ function ContextProvider({ children }) {
   const [products, setProducts] = useState([]);
   const [categoryProducts, setCategoryProducts] = useState({});
   const [orderPlaced, setOrderPlaced] = useState(false)
+  const [orders, setOrders] = useState([])
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -42,9 +45,15 @@ function ContextProvider({ children }) {
     setCart(prev => prev.filter(prod => prod.id !== id));
   }
 
-  function emptyCart() {
+  function emptyCart(ref) {
+    const total = cart.map(product=> product.price * product.qty).reduce((a, b) => {
+      return a + b;
+    })
     setTimeout(setOrderPlaced(true),2000)
     setCart([]);
+    
+    setOrders([...orders, {items: [...cart], details: {ref: ref, total: total } }])
+    console.log(orders);
   }
 
   const getCategoryProducts = async (category = '') => {
@@ -68,7 +77,9 @@ function ContextProvider({ children }) {
         categoryProducts,
         getCategoryProducts,
         orderPlaced,
-        setOrderPlaced
+        setOrderPlaced,
+        setOrders,
+        orders
       }}
     >
       {children}

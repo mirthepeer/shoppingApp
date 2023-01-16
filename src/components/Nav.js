@@ -62,6 +62,9 @@ export default function Nav() {
         <Link style={{ ...linkStyle, display: "block" }} to="/about">
           <p className="nav-item">About</p>
         </Link>
+        <Link style={{ ...linkStyle, display: "block" }} to="/orders">
+          <p className="nav-item">Orders</p>
+        </Link>
         <Link style={{ ...linkStyle, display: "block" }} to="/categories">
           <p className="nav-item display">Categories</p>
         </Link>

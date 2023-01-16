@@ -349,6 +349,13 @@ span {
   grid-column: 10/-1;
 }
 
+.order-ref{
+  position: fixed;
+  align-self: center;
+  justify-self: flex-end;
+  bottom: 35px;
+}
+
 .product-link {
   text-decoration-color: rgb(66, 42, 34);
 }
@@ -515,6 +522,7 @@ span {
   text-shadow: 0 0 20px #fff;
   color: rgb(51, 33, 27);
   letter-spacing: .5px;
+  font-weight: 400;
 }
 .centered-div {
   display: flex;
@@ -551,6 +559,11 @@ span {
 
 .border-bottom {
   border: none;
+}
+
+.light{
+  font-weight: 300;
+  font-size: .85rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -652,4 +665,19 @@ span {
   .item-detail {
     padding: 0;
   }
+  .light{
+    font-size: .85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+.order-ref{
+  font-size: 0.95rem;
+}
+
+.light{
+  font-size: 0.65rem;
+}
+
+
 }
