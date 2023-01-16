@@ -48,6 +48,9 @@ export default function Nav() {
         <Link onClick={() => toggleNav()} style={linkStyle} to="/about">
           <p className="nav-item">About</p>
         </Link>
+        <Link onClick={() => toggleNav()} style={linkStyle} to="/orders">
+          <p className="nav-item">Orders</p>
+        </Link>
         <Link onClick={() => toggleNav()} style={linkStyle} to="/categories">
           <p className="nav-item">Categories</p>
         </Link>
