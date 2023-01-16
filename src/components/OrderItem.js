@@ -10,7 +10,7 @@ export default function OrderItem({ item, index }) {
       </div>
       <div className="order-date flex-column-centered-content">
         <p className="title">Order Date</p>
-        <p> {date}</p>
+        <p className="info"> {date}</p>
       </div>
       <div className="amount-paid flex-column-centered-content">
         <p className="title">Total Paid</p>
