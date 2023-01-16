@@ -8,19 +8,22 @@ import uuid from "react-uuid";
 export default function(){
     const {cart, removeItem, emptyCart, handleAdd, orderPlaced, setOrderPlaced, setOrders, orders} = useContext(Context)
     const [showBox, setShowbox] = useState(false)
+    const [ref,setRef] = useState('')
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
     })
-    const ref = uuid() 
+    
 
    useEffect(()=>{
     setOrderPlaced(false)
    },[])
 
-    function placeOrder(ref){
+    function placeOrder(){
+        const ref = uuid() 
         setShowbox(true)
         setTimeout(()=>emptyCart(ref),2000)
+        setRef(ref)
         console.log(orders);
        
         
@@ -62,7 +65,7 @@ export default function(){
     })
 
     const message = cart.length === 0 && <p className="light-weight">Your cart is empty</p>
-    const checkoutBtn = cart.length>0 &&  <button onClick={()=>placeOrder(ref)} className="primary-btn center">Place Order</button>
+    const checkoutBtn = cart.length>0 &&  <button onClick={()=>placeOrder()} className="primary-btn center">Place Order</button>
     const boxVisiblityStyle =  {display: showBox? '' : 'none' } 
     function closeBox(){
         setShowbox(false)

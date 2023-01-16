@@ -6,12 +6,15 @@ export default function Orders(){
     const {orders} = useContext(Context)
 
     const myOrders = orders.map(item=>{
-        console.log(item.details.ref)
+        return (
+            <p>{item.details.ref}</p>
+        )
     })
     
     return (
         <div className="current-tab">
         <p>OrderPage</p>
+        {myOrders}
         </div>
     )
 
