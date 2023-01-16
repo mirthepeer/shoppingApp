@@ -1,7 +1,10 @@
 export default function OrderItem({ item, index }) {
   const { ref, total, date } = item.details;
 
-  console.log();
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+})
 
   return (
     <div className="ordered-item accent">
@@ -14,7 +17,7 @@ export default function OrderItem({ item, index }) {
       </div>
       <div className="amount-paid flex-column-centered-content">
         <p className="title">Total Paid</p>
-        <p>${total}</p>
+        <p>{formatter.format(total)}</p>
       </div>
       <div className="order-reference flex-column-centered-content">
         <p className="title">Reference</p>

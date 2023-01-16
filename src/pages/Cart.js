@@ -99,9 +99,7 @@ export default function(){
         { orderPlaced?
         
         <div className="order-ref">
-        <div className="order-link">
-        
-        </div>
+        <Link to='/orders' className="orders-link-btn primary-btn">View Orders</Link>
         <p className="order-status">Order Reference</p>
         <small className="order-status light">{ref}</small>
         </div> : 
