@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
+import getCurrentDate from '../utils/getCurrentDate';
 
 
 const Context = createContext();
@@ -51,7 +52,7 @@ function ContextProvider({ children }) {
     setTimeout(setOrderPlaced(true),2000)
     setCart([]);
     
-    setOrders([...orders, {items: [...cart], details: {ref: ref, total: total } }])
+    setOrders([...orders, {items: [...cart], details: {ref: ref, total: total, date: getCurrentDate() } }])
     console.log(orders);
   }
 

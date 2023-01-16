@@ -1,9 +1,10 @@
 
-import { useContext, useEffect, useId } from "react"
+import { useContext, useEffect } from "react"
 import { Context } from "../context/Context"
 import { useState } from "react"
 import BarLoader from "react-spinners/BarLoader";
 import uuid from "react-uuid";
+import { Link } from "react-router-dom";
 
 export default function(){
     const {cart, removeItem, emptyCart, handleAdd, orderPlaced, setOrderPlaced, setOrders, orders} = useContext(Context)
@@ -93,8 +94,14 @@ export default function(){
         <div style={boxVisiblityStyle} className="order-placed">
         <i onClick={() => closeBox()} class="ri-close-line cross-icon"></i>
         <p className="order-status">{orderMessage}</p>
+        
+        
         { orderPlaced?
+        
         <div className="order-ref">
+        <div className="order-link">
+        
+        </div>
         <p className="order-status">Order Reference</p>
         <small className="order-status light">{ref}</small>
         </div> : 
