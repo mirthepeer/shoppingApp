@@ -45,7 +45,7 @@ export default function(){
       data-testid="loader"
     />
         const CheckoutElemets = cart.map((item, i)=>{
-        const qty = cart.find(item=>item.id ===item.id).qty
+        const qty = cart.find(ye=>ye.id ===item.id).qty
         return (
             <>
             <div className="wrapper">
