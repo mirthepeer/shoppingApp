@@ -52,7 +52,7 @@ function ContextProvider({ children }) {
     setTimeout(setOrderPlaced(true),2000)
     setCart([]);
     
-    setOrders([...orders, {items: [...cart], details: {ref: ref, total: total, date: getCurrentDate() } }])
+    setOrders([{items: [...cart], details: {ref: ref, total: total, date: getCurrentDate() } }, ...orders])
     console.log(orders);
   }
 

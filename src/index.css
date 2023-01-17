@@ -360,6 +360,9 @@ span {
 a{
   text-decoration: none;
 }
+a:hover{
+  cursor: pointer;
+}
 .order-ref{
   position: fixed;
   align-self: center;
@@ -414,6 +417,7 @@ a{
 .nav-item {
   display: inline-block;
   position: relative;
+  font-size: 1.2rem;
 }
 
 .nav-item::after {
@@ -429,9 +433,34 @@ a{
   transition: transform 0.25s ease-out;
 }
 
+.social-media{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  font-size: 3rem;
+  color: rgb(51, 33, 27);
+}
+
+.about-info{
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(255, 244, 225, 1);
+  padding: 1em;
+  line-height: 3rem;
+  border-radius: 10px;
+  font-weight: 400;
+  color: rgba(66, 42, 34, 0.724);
+  margin-top: 1rem;
+  
+}
+
 .nav-item:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.nav-item:active{
+  background-color: aqua;
 }
 
 .container {
@@ -643,6 +672,9 @@ a{
 
 
 @media screen and (max-width: 900px) {
+  .about-info{
+    width: 70%;
+  }
   .jumbotron-landing {
     height: 50vh;
   }
@@ -672,6 +704,9 @@ a{
 }
 
 @media screen and (max-width: 620px) {
+  .about-info{
+    width: 90%;
+  }
   .hamburger {
     display: block;
     margin-left: auto;
