@@ -72,7 +72,7 @@ export default function CategoryItems() {
       <div className="container border">
         {catagoryItemsList}
       </div>
-      <h2 className='center accent margin-top'>Shop Other Categories</h2>
+      <h1 className='center accent margin-top'>Shop Other Categories</h1>
       <div className='container margin-top border'>
        
         {categorySuggestions}

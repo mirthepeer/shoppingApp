@@ -7,7 +7,7 @@ import uuid from "react-uuid";
 import { Link } from "react-router-dom";
 
 export default function(){
-    const {cart, removeItem, emptyCart, handleAdd, orderPlaced, setOrderPlaced, setOrders, orders} = useContext(Context)
+    const {cart, removeItem, emptyCart, handleAdd, orderPlaced, setOrderPlaced, setOrders, orders , setCurrentPage} = useContext(Context)
     const [showBox, setShowbox] = useState(false)
     const [ref,setRef] = useState('')
     const formatter = new Intl.NumberFormat('en-US', {
@@ -99,7 +99,7 @@ export default function(){
         { orderPlaced?
         
         <div className="order-ref">
-        <Link to='/orders' className="orders-link-btn primary-btn">View Orders</Link>
+        <Link onClick={()=>setCurrentPage('orders')} to='/orders' className="orders-link-btn primary-btn">View Orders</Link>
         <p className="order-status">Order Reference</p>
         <small className="order-status light">{ref}</small>
         </div> : 
