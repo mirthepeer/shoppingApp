@@ -5,6 +5,7 @@ import OrderItem from "../components/OrderItem";
 export default function Orders(){
    
     const {orders} = useContext(Context)
+    console.log(orders);
 
     const myOrders = orders.map((item,i)=>{
         return (
