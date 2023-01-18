@@ -462,6 +462,11 @@ a:hover{
   
 }
 
+.italic{
+  font-style: italic;
+}
+
+
 .nav-item:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
@@ -593,6 +598,10 @@ a:hover{
   border-bottom: 1px solid;
   background-color: rgba(255, 244, 225, 1);
  
+}
+
+.peach{
+  background-color: rgba(230, 182, 124, 0.443);
 }
 
 .ordered-item:hover{

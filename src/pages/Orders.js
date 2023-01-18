@@ -23,7 +23,7 @@ export default function Orders(){
         <h1 className="center accent">Past Orders</h1>
         {myOrders.length>0 ? '' : noOrdersMessage }
         { myOrders.length > 0 && 
-        <div className="ordered-item accent margin-top-1em">
+        <div className="ordered-item accent margin-top-1em italic peach">
       <div className="order-index flex-column-centered-content">
         <p>No.</p>
       </div>
