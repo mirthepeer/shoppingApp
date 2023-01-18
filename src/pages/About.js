@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="current-tab">
-      <h2 className="center accent">About Page</h2>
+      <h1 className="center accent">About Page</h1>
       <div  className="about-info">
       <p className="about-text">
         Welcome to my personal ecommerce portfolio website! This platform is

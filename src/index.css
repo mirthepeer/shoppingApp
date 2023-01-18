@@ -33,6 +33,7 @@ small {
   text-transform: capitalize;
   font-size: 1.4rem;
   align-self: center;
+  text-align: justify;
   letter-spacing: 1px;
   color: rgba(66, 42, 34, 0.721);
   line-height: 2.5rem;
@@ -447,10 +448,12 @@ a:hover{
   background-color: rgba(255, 244, 225, 1);
   padding: 1em;
   line-height: 3rem;
+  word-spacing: 3px;
   border-radius: 10px;
   font-weight: 400;
   color: rgba(66, 42, 34, 0.724);
   margin-top: 1rem;
+  text-align: justify;
   
 }
 
@@ -585,6 +588,10 @@ a:hover{
  
 }
 
+.ordered-item:hover{
+  background-color: rgba(230, 182, 124, 0.443);
+}
+
 .order-index{
   grid-column: 1/2;
   align-self: center;
@@ -609,7 +616,6 @@ a:hover{
 }
 
 .title{
-  font-size: 1.2rem;
   font-weight: 500;
 }
 
