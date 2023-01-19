@@ -9,8 +9,8 @@ export default function ProductDescription() {
   const thisProduct = products.find((item) => item.id === parseInt(id));
   const { title, description, price, image } = thisProduct;
   const { rate, count } = thisProduct.rating;
-  const thisProductInCart = cart.find(item=>item.id === thisProduct.id)
-  const qty = thisProductInCart ?  thisProductInCart.qty : 0
+  const thisProductInCart = cart.find((item) => item.id === thisProduct.id);
+  const qty = thisProductInCart ? thisProductInCart.qty : 0;
   const suggestions = products.filter(
     (item) => item.id != id && item.category === thisProduct.category
   );
@@ -40,13 +40,14 @@ export default function ProductDescription() {
           <p className="bold accent">${price}</p>
           <div className="buttons">
             <i
-              onClick={() => handleAdd(thisProduct)}
-              class="ri-add-circle-line accent"
-            ></i>
-            <p className="qty">{qty}</p>
-            <i
               onClick={() => removeItem(thisProduct.id)}
               class="ri-delete-bin-7-line accent"
+            ></i>
+            <p className="qty">{qty}</p>
+
+            <i
+              onClick={() => handleAdd(thisProduct)}
+              class="ri-add-circle-line accent"
             ></i>
           </div>
         </div>
@@ -55,7 +56,6 @@ export default function ProductDescription() {
         <h2 className="center accent">You may also like</h2>
         <div className="container">{suggestedItems}</div>
       </div>
-
     </>
   );
 }
