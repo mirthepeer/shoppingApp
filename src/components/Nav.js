@@ -6,7 +6,7 @@ export default function Nav() {
   const { cart, currentPage, setCurrentPage } = useContext(Context);
   const cartIcon =
     cart.length > 0 ? (
-      <i class="ri-shopping-cart-fill">({cart.length})</i>
+      <i class="ri-shopping-cart-fill"></i>
     ) : (
       <i class="ri-shopping-cart-2-line"></i>
     );
@@ -42,7 +42,24 @@ export default function Nav() {
         >
           ShopEZ.
         </Link>
-        {hamburgerIcon}
+        <div className="responsive-items">
+          <Link
+            to="/cart"
+            onClick={() => {
+              setCurrentPage("cart");
+              setToggle(false);
+            }}
+          >
+            <p
+              className={`nav-item accent ${
+                currentPage === "cart" ? "active" : ""
+              }`}
+            >
+              {cartIcon}
+            </p>
+          </Link>
+          {hamburgerIcon}
+        </div>
       </div>
 
       <div className="nav-items display-sm">
@@ -56,18 +73,6 @@ export default function Nav() {
         >
           <p className={`nav-item ${currentPage === "about" ? "active" : ""}`}>
             About
-          </p>
-        </Link>
-        <Link
-          onClick={() => {
-            toggleNav();
-            setCurrentPage("orders");
-          }}
-          style={linkStyle}
-          to="/orders"
-        >
-          <p className={`nav-item ${currentPage === "orders" ? "active" : ""}`}>
-            Orders
           </p>
         </Link>
         <Link
@@ -103,15 +108,16 @@ export default function Nav() {
         <Link
           onClick={() => {
             toggleNav();
-            setCurrentPage("cart");
+            setCurrentPage("orders");
           }}
           style={linkStyle}
-          to="/cart"
+          to="/orders"
         >
-          <p className={`nav-item ${currentPage === "cart" ? "active" : ""}`}>
-            {cartIcon}
+          <p className={`nav-item ${currentPage === "orders" ? "active" : ""}`}>
+            Orders
           </p>
         </Link>
+       
       </div>
       <div className="nav-items display">
         <Link
@@ -123,15 +129,7 @@ export default function Nav() {
             About
           </p>
         </Link>
-        <Link
-          onClick={() => setCurrentPage("orders")}
-          style={{ ...linkStyle, display: "block" }}
-          to="/orders"
-        >
-          <p className={`nav-item ${currentPage === "orders" ? "active" : ""}`}>
-            Orders
-          </p>
-        </Link>
+        
         <Link
           onClick={() => setCurrentPage("categories")}
           style={{ ...linkStyle, display: "block" }}
@@ -155,6 +153,15 @@ export default function Nav() {
             className={`nav-item ${currentPage === "products" ? "active" : ""}`}
           >
             Products
+          </p>
+        </Link>
+        <Link
+          onClick={() => setCurrentPage("orders")}
+          style={{ ...linkStyle, display: "block" }}
+          to="/orders"
+        >
+          <p className={`nav-item ${currentPage === "orders" ? "active" : ""}`}>
+            Orders
           </p>
         </Link>
         <Link

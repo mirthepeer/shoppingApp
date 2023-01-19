@@ -661,6 +661,13 @@ a:hover{
 .flex-column {
   flex-direction: column;
 }
+.responsive-items{
+  display: none;
+  margin-left: auto;
+  gap: .5em;
+  align-items: center;
+}
+
 
 .gap {
   gap: 1em;
@@ -691,6 +698,7 @@ a:hover{
   font-weight: 300;
   font-size: .85rem;
 }
+
 
 
 @media screen and (max-width: 900px) {
@@ -728,6 +736,10 @@ a:hover{
 @media screen and (max-width: 620px) {
   .about-info{
     width: 90%;
+  }
+
+  .responsive-items{
+    display: flex;
   }
   .hamburger {
     display: block;
