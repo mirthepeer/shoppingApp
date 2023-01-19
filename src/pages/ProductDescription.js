@@ -1,12 +1,18 @@
 import { useParams } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../context/Context";
 import Product from "../components/Product";
 
 export default function ProductDescription() {
   const { products, handleAdd, removeItem, cart } = useContext(Context);
   const { id } = useParams();
-  const thisProduct = products.find((item) => item.id === parseInt(id));
+  const [thisProduct, setThisProduct] = useState({
+    title: '',
+    description:'',
+    price:'',
+    image:'',
+    rating:{rate:'',count:''}
+  })
   const { title, description, price, image } = thisProduct;
   const { rate, count } = thisProduct.rating;
   const thisProductInCart = cart.find((item) => item.id === thisProduct.id);
@@ -14,6 +20,17 @@ export default function ProductDescription() {
   const suggestions = products.filter(
     (item) => item.id != id && item.category === thisProduct.category
   );
+
+    useEffect(()=>{
+      if(products.length>0){
+        setThisProduct(products.find((item) => item.id === parseInt(id)))
+      }else{
+        fetch(`https://fakestoreapi.com/products/${parseInt(id)}`)
+        .then(res=>res.json()).then(data=>setThisProduct(data))
+      }
+
+    },[])
+
   const suggestedItems = suggestions.map((item) => {
     return (
       <Product
