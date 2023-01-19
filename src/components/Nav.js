@@ -31,6 +31,7 @@ export default function Nav() {
     <nav>
       <div className={`nav-responsive ${toggle ? "border-bottom" : ""}`}>
         <Link
+          onClick={() => setCurrentPage("home")}
           style={{
             textDecoration: "none",
             color: " rgb(66, 42, 34)",
