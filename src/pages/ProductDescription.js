@@ -29,7 +29,7 @@ export default function ProductDescription() {
         .then(res=>res.json()).then(data=>setThisProduct(data))
       }
 
-    },[])
+    },[id])
 
   const suggestedItems = suggestions.map((item) => {
     return (
