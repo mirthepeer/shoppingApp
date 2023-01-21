@@ -47,7 +47,7 @@ export default function ProductDescription() {
     <>
       <div className="current-tab">
         <div className="item-detail">
-          <h1 className="item-title accent">{title}</h1>
+          <h1 className="item-title title-1 accent">{title}</h1>
           <p className="rating">
             {rate} ⭐ <span className="rating-count">({count})</span>
           </p>
@@ -70,7 +70,7 @@ export default function ProductDescription() {
         </div>
       </div>
       <div className="suggestions">
-        <h2 className="center accent">You may also like</h2>
+        <h2 className="center accent title-1">You may also like</h2>
         <div className="container">{suggestedItems}</div>
       </div>
     </>

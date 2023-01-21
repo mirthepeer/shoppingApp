@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../context/Context";
 export default function Home() {
+  const {setCurrentPage} = useContext(Context)
+ 
   const linkStyle = { textDecoration: "none" };
   return (
     <div className="current-tab">
@@ -17,7 +21,11 @@ export default function Home() {
             competitive prices. Excellent customer service.
           </p>
 
-          <Link style={linkStyle} to="/products">
+          <Link
+           style={linkStyle} to="/products"
+           onClick={()=>setCurrentPage('products')}
+
+          >
             <button className="secondary-btn accent">Browse Products</button>
           </Link>
         </div>

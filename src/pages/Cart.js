@@ -65,7 +65,7 @@ export default function(){
         )
     })
 
-    const message = cart.length === 0 && <p className="light-weight">Your cart is empty</p>
+    const message = cart.length === 0 && <p className="center accent">Your cart is empty</p>
     const checkoutBtn = cart.length>0 &&  <button onClick={()=>placeOrder()} className="primary-btn center">Place Order</button>
     const boxVisiblityStyle =  {display: showBox? '' : 'none' } 
     function closeBox(){
@@ -77,7 +77,7 @@ export default function(){
     return (
         <>
         <div className="current-tab center">
-        <h3 className="accent heading medium">Check Out</h3>
+        <h3 className="accent heading medium title-1">Check Out</h3>
         {message}
         
         

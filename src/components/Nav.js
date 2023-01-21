@@ -32,13 +32,7 @@ export default function Nav() {
       <div className={`nav-responsive ${toggle ? "border-bottom" : ""}`}>
         <Link
           onClick={() => setCurrentPage("home")}
-          style={{
-            textDecoration: "none",
-            color: " rgb(66, 42, 34)",
-            fontSize: "1.8rem",
-            fontWeight: "800",
-            paddingLeft: ".4em",
-          }}
+          className='title-2 accent'
           to="/"
         >
           ShopEZ.

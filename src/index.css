@@ -635,6 +635,18 @@ a:hover{
   font-weight: 500;
 }
 
+.title-1{
+  font-weight: 500;
+}
+
+.title-2{
+  font-size: 1.8rem;
+  font-size: 800;
+  padding-left: .4em;
+  font-weight: 800;
+
+}
+
 .amount-paid{
   grid-column: 5/7;
 }
@@ -736,6 +748,10 @@ a:hover{
 @media screen and (max-width: 620px) {
   .about-info{
     width: 90%;
+  }
+
+  .title-2{
+    font-size: 1.5rem;
   }
 
   .responsive-items{

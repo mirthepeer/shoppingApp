@@ -34,7 +34,7 @@ export default function Products() {
   return (
     <>
       <div className="current-tab center">
-        <h1 className="accent">Shop All Products</h1>
+        <h1 className="accent title-1">Shop All Products</h1>
       </div>
       <div className="centered-div">
         {loadingMessage}

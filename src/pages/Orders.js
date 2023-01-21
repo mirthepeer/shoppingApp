@@ -21,7 +21,7 @@ export default function Orders(){
     const noOrdersMessage = <p className="center accent">No Orders Found</p>
     return (
         <div className="current-tab">
-        <h1 className="center accent">Past Orders</h1>
+        <h1 className="center accent title-1">Past Orders</h1>
         {myOrders.length>0 ? '' : noOrdersMessage }
         { myOrders.length > 0 && 
         <div className="ordered-item accent margin-top-1em italic peach">
