@@ -17,6 +17,7 @@ https://shopez.netlify.app/
 - Cart System
 - Shopping Suggestions
 - Order History
+- Responsive Design
 
 
 ## Installation
