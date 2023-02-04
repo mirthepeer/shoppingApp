@@ -62,8 +62,8 @@ export default function CategoryItems() {
   return (
     <>
       <div className="current-tab">
-        <h1 className='accent center'>
-          Shop <span className="category-item">{category}</span>
+        <h1 className='accent center title-1'>
+          Shop <span className="title-1">{category}</span>
         </h1>
       </div>
       <div className='centered-div'>
